@@ -22,7 +22,7 @@ Route::group(['domain' => env('APP_ROOT_DOMAIN')], function ()
     Route::get('/change-language', 'LanguageController@changeLanguage');
 });
 
-Route::group(['domain' => 'admin.'.env('APP_ROOT_DOMAIN'), 'namespace' => 'Admin'], function ()
+Route::group(['domain' => env('APP_ROOT_DOMAIN'), 'prefix' => 'admin' , 'namespace' => 'Admin'], function ()
 {
     Route::get('/', 'AdminController@login');
     Route::get('/home', 'AdminController@showDashBoard');
