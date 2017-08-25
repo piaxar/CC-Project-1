@@ -146,6 +146,7 @@
         <div class="flex-center position-ref full-height">
             <div class="top-right links">
                 <a href="/change-language">@lang('survey.lang')</a>
+                <a href="/admin">@lang('survey.admin')</a>
             </div>
             <div class="content">
                 <div class="title m-b-md">

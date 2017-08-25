@@ -71,9 +71,9 @@
             @lang('chooseStats.title')
         </div>
         <div class="links">
-            <a href="/stats/os">@lang('chooseStats.os')</a>
-            <a href="/stats/courses">@lang('chooseStats.course')</a>
-            <a href="/stats/programming-languages">@lang('chooseStats.lang')</a>
+            <a href="/admin/stats/os">@lang('chooseStats.os')</a>
+            <a href="/admin/stats/courses">@lang('chooseStats.course')</a>
+            <a href="/admin/stats/programming-languages">@lang('chooseStats.lang')</a>
         </div>
         </div>
     </div>

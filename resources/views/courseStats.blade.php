@@ -2,8 +2,10 @@
 <head>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
+        var desc = {!! $desc !!};
         var course = {!! $course  !!};
         console.log(course);
+        console.log(desc);
         google.charts.load("current", {packages:["corechart"]});
         google.charts.setOnLoadCallback(drawOSChart);
         function drawOSChart() {
@@ -18,7 +20,7 @@
             ]);
 
             var options = {
-                title: 'Choose your course',
+                title: desc,
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('piechart_course'));

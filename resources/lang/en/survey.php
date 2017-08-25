@@ -7,5 +7,6 @@ return [
     'experience_title' => 'Years of experience',
     'code_title' => 'Write "Hello world" program on your favourite language',
     'button_message' => 'Submit',
-    'lang' => 'Change language'
+    'lang' => 'Change language',
+    'admin' => 'Admin'
 ];

@@ -17,7 +17,8 @@ class ChartsController extends Controller
         $result_os = ["MacOS" => $os_mac, "Windows" => $os_windows, "Linux" => $os_linux];
 
         return view('osStats')
-            ->with('os',json_encode($result_os));
+            ->with('os',json_encode($result_os))
+            ->with('desc', json_encode(__('stats.os')));;
     }
 
     public function getCourseStats() {
@@ -31,7 +32,8 @@ class ChartsController extends Controller
         $result_course = ["BS1" => $course_bs1, "BS2" => $course_bs2, "BS3" => $course_bs3, "BS4" => $course_bs4, "MS1" => $course_ms1, "MS2" => $course_ms2];
 
         return view('courseStats')
-            ->with('course', json_encode($result_course));
+            ->with('course', json_encode($result_course))
+            ->with('desc', json_encode(__('stats.course')));
     }
 
     public function getLangStats() {
@@ -44,6 +46,7 @@ class ChartsController extends Controller
         $result_lang = ["Python" => $lang_python, "C/C++" => $lang_c, "PHP" => $lang_php, "Eiffel" => $lang_eiffel, "Java" => $lang_java];
 
         return view('langStats')
-            ->with('lang', json_encode($result_lang));
+            ->with('lang', json_encode($result_lang))
+            ->with('desc', json_encode(__('stats.lang')));;
     }
 }

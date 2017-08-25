@@ -6,7 +6,7 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/stats') }}">@lang('dashboard.stats_link')</a>
+                        <a href="{{ url('/admin/stats') }}">@lang('dashboard.stats_link')</a>
                     @endauth
                 </div>
                 <div class="panel panel-default">

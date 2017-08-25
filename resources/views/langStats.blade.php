@@ -3,6 +3,7 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         var lang = {!! $lang  !!};
+        var desc = {!! $desc !!};
         console.log(lang);
         google.charts.load("current", {packages:["corechart"]});
         google.charts.setOnLoadCallback(drawOSChart);
@@ -18,7 +19,7 @@
             ]);
 
             var options = {
-                title: 'What is your favourite programming language?',
+                title: desc,
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('piechart_lang'));

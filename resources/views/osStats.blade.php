@@ -3,6 +3,7 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         var os = {!! $os  !!};
+        var desc = {!! $desc !!};
         console.log(os);
         google.charts.load("current", {packages:["corechart"]});
         google.charts.setOnLoadCallback(drawOSChart);
@@ -16,7 +17,7 @@
             ]);
 
             var options = {
-                title: 'What is main OS?',
+                title: desc,
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('piechart_os'));
