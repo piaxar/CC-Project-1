@@ -10,7 +10,7 @@
         "khill/lavacharts": "3.0.*",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
-        "ext-mysql": "*",
+        "ext-mysql": "*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
