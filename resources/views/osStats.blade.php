@@ -12,7 +12,7 @@
                 ['Task', 'Hours per Day'],
                 ['MacOS',     os['MacOS']],
                 ['Windows',      os['Windows']],
-                ['Linu',      os['Linux']],
+                ['Linux',      os['Linux']],
 
             ]);
 
