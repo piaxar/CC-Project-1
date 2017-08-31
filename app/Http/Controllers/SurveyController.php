@@ -20,6 +20,11 @@ class SurveyController extends Controller
         $experience = $request->get('experience_period');
         $code = $request->get('code');
 
+        $this->validate($request, [
+            'course-id', 'os', 'programming_lang', 'experience_period' => 'required',
+            'code' => 'required|max:256'
+        ]);
+
         $newRecord = new Survey();
         $newRecord->course_id = $courseId;
         $newRecord->os = $os;

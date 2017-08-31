@@ -189,7 +189,7 @@
                                 </li>
                                 <li>
                                     <label>@lang('survey.experience_title') <span class="required">*</span></label>
-                                    <input type="text" id="textInput" value="" placeholder="1" class="field-long">
+                                    <input type="text" id="textInput" placeholder="1" class="field-long">
                                     <input type="range" name="experience_period" id="experience_period" min="1" max="10" value="1"  class="field-long" onchange="updateTextInput(this.value);"/>
                                 </li>
                                 <li>
@@ -201,46 +201,20 @@
                                 </li>
                             </ul>
                         </form>
+                        @if (count($errors))
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>
+                                        {{ $error }}
+                                    </li>
+                                @endforeach
+                            </ul>
+                        @endif
                     </tr>
                 </table>
             </div>
         </div>
         <script type="text/javascript">
-            function validateForm()
-            {
-                var a=document.forms["Form"]["name"].value;
-                var b=document.forms["Form"]["surname"].value;
-                var c=document.forms["Form"]["group-id"].value;
-                var d=document.forms["Form"]["course-id"].value;
-                var e=document.forms["Form"]["message"].value;
-                if (a == null || a == "",
-                    b == null || b == "",
-                    c == null || c == "",
-                    d == null || d == "",
-                    e == null || e == "")
-                {
-                    alert("Please Fill All Required Field");
-                    return false;
-                }
-                if (e.size < 256)
-                {
-                    alert("Your text must be longer")
-                    return false;
-                }
-
-            }
-            function validateEmptyString(val) {
-                if (val == null || val == "") {
-                    alert("Please fill field field")
-                    return false;
-                }
-            }
-
-            function validateTextLength(val) {
-                if (val.size > 255) {
-
-                }
-            }
             function updateTextInput(val) {
                 document.getElementById('textInput').value=val;
             }
